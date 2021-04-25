@@ -1,7 +1,8 @@
 import React from "react";
-import { AppBar, makeStyles, Typography } from "@material-ui/core";
+import { Typography, AppBar } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 import VideoPlayer from "./components.js/VideoPlayer";
-import Options from "./components.js/Options";
+import Sidebar from "./components.js/Sidebar";
 import Notifications from "./components.js/Notifications";
 
 const useStyles = makeStyles((theme) => ({
@@ -29,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
   },
 }));
+
 const App = () => {
   const classes = useStyles();
 
@@ -40,9 +42,9 @@ const App = () => {
         </Typography>
       </AppBar>
       <VideoPlayer />
-      <Options>
+      <Sidebar>
         <Notifications />
-      </Options>
+      </Sidebar>
     </div>
   );
 };
